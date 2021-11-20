@@ -1,0 +1,547 @@
+/*
+* Orson http://en.orson.io , autreplanete http://www.autreplanete.com/ 
+*  
+**/
+
+
+// Brand Colors
+$blue: #0769e1!important;
+$indigo: #6610f2!important;
+$purple: #6f42c1!important;
+$pink: #e83e8c!important;
+$red: #e17f07!important;
+$orange: #fd7e14!important;
+$yellow: #ffc107!important;
+$green: #28a745!important;
+$teal: #20c997!important;
+$cyan: #17a2b8!important;
+$white: #fff!important;
+$gray-100: #f8f9fa!important;
+$gray-200: #e9ecef!important;
+$gray-300: #dee2e6!important;
+$gray-400: #ced4da!important;
+$gray-500: #adb5bd!important;
+$gray-600: #868e96!important;
+$gray-700: #495057!important;
+$gray-800: #343a40!important;
+$gray-900: #212529!important;
+$black: #000!important;
+$grays: (100: $gray-100, 200: $gray-200, 300: $gray-300, 400: $gray-400, 500: $gray-500, 600: $gray-600, 700: $gray-700, 800: $gray-800, 900: $gray-900)!important;
+$theme-colors: (primary: $blue, secondary: $gray-600, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800)!important;
+$colors: (blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600,gray-dark: $gray-800)!important;
+$theme-color-interval: 8%!important;
+
+
+// Spacing
+$spacer: 1rem!important;
+$spacers: (0: 0, 1: ($spacer * 0.25), 2: ($spacer * 0.5), 3: $spacer, 4: ($spacer * 1.5), 5: ($spacer * 3))!important;
+$sizes: (25: 25%, 50: 50%, 75: 75%, 100: 100%)!important;
+
+
+// Options
+$enable-rounded: true!important;
+$enable-shadows: false!important;
+$enable-gradients: false!important;
+$enable-transitions: true!important;
+$enable-hover-media-query: false!important;
+$enable-grid-classes: true!important;
+$enable-print-styles: true!important;
+
+
+// Body
+$body-bg: $white!important;
+$body-color: $gray-900!important;
+
+
+// Links
+$link-color: theme-color('primary')!important;
+$link-decoration: none!important;
+$link-hover-color: darken($link-color, 15%)!important;
+$link-hover-decoration: underline!important;
+
+
+// Grid
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)!important;
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)!important;
+$grid-columns: 12!important;
+$grid-gutter-width: 30px!important;
+
+
+// Components
+$line-height-lg: 1.5!important;
+$line-height-sm: 1.5!important;
+$border-width: 1px!important;
+$border-radius: 0.25rem!important;
+$border-radius-lg: 0.3rem!important;
+$border-radius-sm: 0.2rem!important;
+$component-active-color: $white!important;
+$component-active-bg: theme-color('primary')!important;
+$caret-width: 0.3em!important;
+$transition-base: all 0.2s ease-in-out!important;
+$transition-fade: opacity 0.15s linear!important;
+$transition-collapse: height 0.35s ease!important;
+
+
+// Fonts
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif!important;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace!important;
+$font-family-base: $font-family-sans-serif!important;
+$font-size-base: 1rem!important;
+$font-size-lg: 1.25rem!important;
+$font-size-sm: 0.875rem!important;
+$font-weight-normal: normal!important;
+$font-weight-bold: bold!important;
+$font-weight-base: $font-weight-normal!important;
+$line-height-base: 1.5!important;
+$h1-font-size: 2.5rem!important;
+$h2-font-size: 2rem!important;
+$h3-font-size: 1.75rem!important;
+$h4-font-size: 1.5rem!important;
+$h5-font-size: 1.25rem!important;
+$h6-font-size: 1rem!important;
+$headings-margin-bottom: ($spacer / 2)!important;
+$headings-font-family: inherit!important;
+$headings-font-weight: 500!important;
+$headings-line-height: 1.1!important;
+$headings-color: inherit!important;
+$display1-size: 6rem!important;
+$display2-size: 5.5rem!important;
+$display3-size: 4.5rem!important;
+$display4-size: 3.5rem!important;
+$display1-weight: 300!important;
+$display2-weight: 300!important;
+$display3-weight: 300!important;
+$display4-weight: 300!important;
+$display-line-height: $headings-line-height!important;
+$lead-font-size: 1.25rem!important;
+$lead-font-weight: 300!important;
+$small-font-size: 80%!important;
+$text-muted: $gray-600!important;
+$blockquote-small-color: $gray-600!important;
+$blockquote-font-size: ($font-size-base * 1.25)!important;
+$hr-border-color: rgba($black, 0.1)!important;
+$hr-border-width: $border-width!important;
+$mark-padding: 0.2em!important;
+$dt-font-weight: $font-weight-bold!important;
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25)!important;
+$nested-kbd-font-weight: $font-weight-bold!important;
+$list-inline-padding: 5px!important;
+$mark-bg: #fcf8e3!important;
+
+
+// Buttons
+$input-btn-padding-y: 0.5rem!important;
+$input-btn-padding-x: 0.75rem!important;
+$input-btn-line-height: 1.25!important;
+$input-btn-padding-y-sm: 0.25rem!important;
+$input-btn-padding-x-sm: 0.5rem!important;
+$input-btn-line-height-sm: 1.5!important;
+$input-btn-padding-y-lg: 0.5rem!important;
+$input-btn-padding-x-lg: 1rem!important;
+$input-btn-line-height-lg: 1.5!important;
+$btn-font-weight: $font-weight-normal!important;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075)!important;
+$btn-focus-box-shadow: 0 0 0 3px rgba(theme-color('primary'), 0.25)!important;
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125)!important;
+$btn-link-disabled-color: $gray-600!important;
+$btn-block-spacing-y: 0.5rem!important;
+$btn-border-radius: $border-radius!important;
+$btn-border-radius-lg: $border-radius-lg!important;
+$btn-border-radius-sm: $border-radius-sm!important;
+$btn-transition: all 0.15s ease-in-out!important;
+
+
+// Forms
+$input-bg: $white!important;
+$input-disabled-bg: $gray-200!important;
+$input-color: $gray-700!important;
+$input-border-color: rgba($black, 0.15)!important;
+$input-btn-border-width: $border-width!important;
+$input-box-shadow: inset 0 1px 1px rgba($black, 0.075)!important;
+$input-border-radius: $border-radius!important;
+$input-border-radius-lg: $border-radius-lg!important;
+$input-border-radius-sm: $border-radius-sm!important;
+$input-focus-bg: $input-bg!important;
+$input-focus-border-color: lighten(theme-color('primary'), 25%)!important;
+$input-focus-box-shadow: $input-box-shadow, $btn-focus-box-shadow!important;
+$input-focus-color: $input-color!important;
+$input-placeholder-color: $gray-600!important;
+$input-height-border: $input-btn-border-width * 2!important;
+$input-height-inner: ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2)!important;
+$input-height: calc(#{$input-height-inner} + #{$input-height-border})!important;
+$input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2)!important;
+$input-height-sm: calc(#{$input-height-inner-sm} + #{$input-height-border})!important;
+$input-height-inner-lg: ($font-size-sm * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2)!important;
+$input-height-lg: calc(#{$input-height-inner-lg} + #{$input-height-border})!important;
+$input-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s!important;
+$form-text-margin-top: 0.25rem!important;
+$form-check-margin-bottom: 0.5rem!important;
+$form-check-input-gutter: 1.25rem!important;
+$form-check-input-margin-y: 0.25rem!important;
+$form-check-input-margin-x: 0.25rem!important;
+$form-check-inline-margin-x: 0.75rem!important;
+$form-group-margin-bottom: 1rem!important;
+$input-group-addon-bg: $gray-200!important;
+$input-group-addon-border-color: $input-border-color!important;
+$custom-control-gutter: 1.5rem!important;
+$custom-control-spacer-y: 0.25rem!important;
+$custom-control-spacer-x: 1rem!important;
+$custom-control-indicator-size: 1rem!important;
+$custom-control-indicator-bg: #ddd!important;
+$custom-control-indicator-bg-size: 50% 50%!important;
+$custom-control-indicator-box-shadow: inset 0 0.25rem 0.25rem rgba($black, 0.1)!important;
+$custom-control-indicator-disabled-bg: $gray-200!important;
+$custom-control-description-disabled-color: $gray-600!important;
+$custom-control-indicator-checked-color: $white!important;
+$custom-control-indicator-checked-bg: theme-color('primary')!important;
+$custom-control-indicator-checked-box-shadow: none!important;
+$custom-control-indicator-focus-box-shadow: 0 0 0 1px $body-bg, 0 0 0 3px theme-color('primary')!important;
+$custom-control-indicator-active-color: $white!important;
+$custom-control-indicator-active-bg: lighten(theme-color('primary'), 35%)!important;
+$custom-control-indicator-active-box-shadow: none!important;
+$custom-checkbox-indicator-border-radius: $border-radius!important;
+$custom-checkbox-indicator-indeterminate-bg: theme-color('primary')!important;
+$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color!important;
+$custom-checkbox-indicator-indeterminate-box-shadow: none!important;
+$custom-radio-indicator-border-radius: 50%!important;
+$custom-select-padding-y: 0.375rem!important;
+$custom-select-padding-x: 0.75rem!important;
+$custom-select-height: $input-height!important;
+$custom-select-indicator-padding: 1rem!important;
+$custom-select-line-height: $input-btn-line-height!important;
+$custom-select-color: $input-color!important;
+$custom-select-disabled-color: $gray-600!important;
+$custom-select-bg: $white!important;
+$custom-select-disabled-bg: $gray-200!important;
+$custom-select-bg-size: 8px 10px!important;
+$custom-select-indicator-color: #333!important;
+$custom-select-border-width: $input-btn-border-width!important;
+$custom-select-border-color: $input-border-color!important;
+$custom-select-border-radius: $border-radius!important;
+$custom-select-focus-border-color: lighten(theme-color('primary'), 25%)!important;
+$custom-select-focus-box-shadow: inset 0 1px 2px rgba($black, 0.075), 0 0 5px rgba($custom-select-focus-border-color, 0.5)!important;
+$custom-select-font-size-sm: 75%!important;
+$custom-select-height-sm: $input-height-sm!important;
+$custom-file-height: 2.5rem!important;
+$custom-file-width: 14rem!important;
+$custom-file-focus-box-shadow: 0 0 0 0.075rem $white, 0 0 0 0.2rem theme-color('primary')!important;
+$custom-file-padding-y: 1rem!important;
+$custom-file-padding-x: 0.5rem!important;
+$custom-file-line-height: 1.5!important;
+$custom-file-color: $gray-700!important;
+$custom-file-bg: $white!important;
+$custom-file-border-width: $border-width!important;
+$custom-file-border-color: $input-border-color!important;
+$custom-file-border-radius: $border-radius!important;
+$custom-file-box-shadow: inset 0 0.2rem 0.4rem rgba($black, 0.05)!important;
+$custom-file-button-color: $custom-file-color!important;
+$custom-file-button-bg: $gray-200!important;
+$custom-file-text: (placeholder: (en: 'Choose file...'), button-label: (en: 'Browse'))!important;
+$form-feedback-valid-color: theme-color('success')!important;
+$form-feedback-invalid-color: theme-color('danger')!important;
+
+
+// Dropdown
+$dropdown-min-width: 10rem!important;
+$dropdown-padding-y: 0.5rem!important;
+$dropdown-spacer: 0.125rem!important;
+$dropdown-bg: $white!important;
+$dropdown-border-color: rgba($black, 0.15)!important;
+$dropdown-border-width: $border-width!important;
+$dropdown-divider-bg: $gray-200!important;
+$dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175)!important;
+$dropdown-link-color: $gray-900!important;
+$dropdown-link-hover-color: darken($gray-900, 5%)!important;
+$dropdown-link-hover-bg: $gray-100!important;
+$dropdown-link-active-color: $component-active-color!important;
+$dropdown-link-active-bg: $component-active-bg!important;
+$dropdown-link-disabled-color: $gray-600!important;
+$dropdown-item-padding-y: 0.25rem!important;
+$dropdown-item-padding-x: 1.5rem!important;
+$dropdown-header-color: $gray-600!important;
+
+
+// Navs
+$nav-link-padding-y: 0.5rem!important;
+$nav-link-padding-x: 1rem!important;
+$nav-link-disabled-color: $gray-600!important;
+$nav-tabs-border-color: #ddd!important;
+$nav-tabs-border-width: $border-width!important;
+$nav-tabs-border-radius: $border-radius!important;
+$nav-tabs-link-hover-border-color: $gray-200!important;
+$nav-tabs-link-active-color: $gray-700!important;
+$nav-tabs-link-active-bg: $body-bg!important;
+$nav-tabs-link-active-border-color: #ddd!important;
+$nav-pills-border-radius: $border-radius!important;
+$nav-pills-link-active-color: $component-active-color!important;
+$nav-pills-link-active-bg: $component-active-bg!important;
+
+
+// Navbar
+$navbar-padding-y: ($spacer / 2)!important;
+$navbar-padding-x: $spacer!important;
+$navbar-brand-font-size: $font-size-lg!important;
+$nav-link-height: $navbar-brand-font-size * $line-height-base!important;
+$navbar-brand-height: ($font-size-base * $line-height-base + $nav-link-padding-y * 2)!important;
+$navbar-brand-padding-y: ($navbar-brand-height - $nav-link-height) / 2!important;
+$navbar-toggler-padding-y: 0.25rem!important;
+$navbar-toggler-padding-x: 0.75rem!important;
+$navbar-toggler-font-size: $font-size-lg!important;
+$navbar-toggler-border-radius: $btn-border-radius!important;
+$navbar-dark-color: rgba($white, 0.5)!important;
+$navbar-dark-hover-color: rgba($white, 0.75)!important;
+$navbar-dark-active-color: rgba($white, 1)!important;
+$navbar-dark-disabled-color: rgba($white, 0.25)!important;
+$navbar-dark-toggler-border-color: rgba($white, 0.1)!important;
+$navbar-light-color: rgba($black, 0.5)!important;
+$navbar-light-hover-color: rgba($black, 0.7)!important;
+$navbar-light-active-color: rgba($black, 0.9)!important;
+$navbar-light-disabled-color: rgba($black, 0.3)!important;
+$navbar-light-toggler-border-color: rgba($black, 0.1)!important;
+
+
+// Tables
+$table-cell-padding: 0.75rem!important;
+$table-cell-padding-sm: 0.3rem!important;
+$table-bg: transparent!important;
+$table-accent-bg: rgba($black, 0.05)!important;
+$table-hover-bg: rgba($black, 0.075)!important;
+$table-active-bg: $table-hover-bg!important;
+$table-border-width: $border-width!important;
+$table-border-color: $gray-200!important;
+$table-head-bg: $gray-200!important;
+$table-head-color: $gray-700!important;
+$table-inverse-bg: $gray-900!important;
+$table-inverse-accent-bg: rgba($white, 0.05)!important;
+$table-inverse-hover-bg: rgba($white, 0.075)!important;
+$table-inverse-border-color: lighten($gray-900, 7.5%)!important;
+$table-inverse-color: $body-bg!important;
+
+
+// Z Index
+$zindex-dropdown: 1000!important;
+$zindex-sticky: 1020!important;
+$zindex-fixed: 1030!important;
+$zindex-modal-backdrop: 1040!important;
+$zindex-modal: 1050!important;
+$zindex-popover: 1060!important;
+$zindex-tooltip: 1070!important;
+
+
+// Pagination
+$pagination-padding-y: 0.5rem!important;
+$pagination-padding-x: 0.75rem!important;
+$pagination-padding-y-sm: 0.25rem!important;
+$pagination-padding-x-sm: 0.5rem!important;
+$pagination-padding-y-lg: 0.75rem!important;
+$pagination-padding-x-lg: 1.5rem!important;
+$pagination-line-height: 1.25!important;
+$pagination-color: $link-color!important;
+$pagination-bg: $white!important;
+$pagination-border-width: $border-width!important;
+$pagination-border-color: #ddd!important;
+$pagination-hover-color: $link-hover-color!important;
+$pagination-hover-bg: $gray-200!important;
+$pagination-hover-border-color: #ddd!important;
+$pagination-active-color: $white!important;
+$pagination-active-bg: theme-color('primary')!important;
+$pagination-active-border-color: theme-color('primary')!important;
+$pagination-disabled-color: $gray-600!important;
+$pagination-disabled-bg: $white!important;
+$pagination-disabled-border-color: #ddd!important;
+
+
+// Jumbotron
+$jumbotron-padding: 2rem!important;
+$jumbotron-bg: $gray-200!important;
+
+
+// Cards
+$card-spacer-y: 0.75rem!important;
+$card-spacer-x: 1.25rem!important;
+$card-border-width: 1px!important;
+$card-border-radius: $border-radius!important;
+$card-border-color: rgba($black, 0.125)!important;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width})!important;
+$card-cap-bg: rgba($black, 0.03)!important;
+$card-bg: $white!important;
+$card-img-overlay-padding: 1.25rem!important;
+$card-deck-margin: ($grid-gutter-width / 2)!important;
+$card-columns-count: 3!important;
+$card-columns-gap: 1.25rem!important;
+$card-columns-margin: $card-spacer-y!important;
+
+
+// Tooltip
+$tooltip-max-width: 200px!important;
+$tooltip-color: $white!important;
+$tooltip-bg: $black!important;
+$tooltip-opacity: 0.9!important;
+$tooltip-padding-y: 3px!important;
+$tooltip-padding-x: 8px!important;
+$tooltip-margin: 0!important;
+$tooltip-arrow-width: 5px!important;
+$tooltip-arrow-height: 5px!important;
+$tooltip-arrow-color: $tooltip-bg!important;
+
+
+// Popovers
+$popover-inner-padding: 1px!important;
+$popover-bg: $white!important;
+$popover-max-width: 276px!important;
+$popover-border-width: $border-width!important;
+$popover-border-color: rgba($black, 0.2)!important;
+$popover-box-shadow: 0 5px 10px rgba($black, 0.2)!important;
+$popover-header-bg: darken($popover-bg, 3%)!important;
+$popover-header-color: $headings-color!important;
+$popover-header-padding-y: 8px!important;
+$popover-header-padding-x: 14px!important;
+$popover-body-color: $body-color!important;
+$popover-body-padding-y: 9px!important;
+$popover-body-padding-x: 14px!important;
+$popover-arrow-width: 10px!important;
+$popover-arrow-height: 5px!important;
+$popover-arrow-color: $popover-bg!important;
+$popover-arrow-outer-width: ($popover-arrow-width + 1px)!important;
+$popover-arrow-outer-color: fade-in($popover-border-color, 0.05)!important;
+
+
+// Badges
+$badge-color: $white!important;
+$badge-font-size: 75%!important;
+$badge-font-weight: $font-weight-bold!important;
+$badge-padding-y: 0.25em!important;
+$badge-padding-x: 0.4em!important;
+$badge-pill-padding-x: 0.6em!important;
+$badge-pill-border-radius: 10rem!important;
+
+
+// Modals
+$modal-inner-padding: 15px!important;
+$modal-dialog-margin: 10px!important;
+$modal-dialog-margin-y-sm-up: 30px!important;
+$modal-title-line-height: $line-height-base!important;
+$modal-content-bg: $white!important;
+$modal-content-border-color: rgba($black, 0.2)!important;
+$modal-content-border-width: $border-width!important;
+$modal-content-box-shadow-xs: 0 3px 9px rgba($black, 0.5)!important;
+$modal-content-box-shadow-sm-up: 0 5px 15px rgba($black, 0.5)!important;
+$modal-backdrop-bg: $black!important;
+$modal-backdrop-opacity: 0.5!important;
+$modal-header-border-color: $gray-200!important;
+$modal-footer-border-color: $modal-header-border-color!important;
+$modal-header-border-width: $modal-content-border-width!important;
+$modal-footer-border-width: $modal-header-border-width!important;
+$modal-header-padding: 15px!important;
+$modal-lg: 800px!important;
+$modal-md: 500px!important;
+$modal-sm: 300px!important;
+$modal-transition: transform 0.3s ease-out!important;
+
+
+// Alerts
+$alert-padding-y: 0.75rem!important;
+$alert-padding-x: 1.25rem!important;
+$alert-margin-bottom: 1rem!important;
+$alert-border-radius: $border-radius!important;
+$alert-link-font-weight: $font-weight-bold!important;
+$alert-border-width: $border-width!important;
+
+
+// Progress bars
+$progress-height: 1rem!important;
+$progress-font-size: 0.75rem!important;
+$progress-bg: $gray-200!important;
+$progress-border-radius: $border-radius!important;
+$progress-box-shadow: inset 0 0.1rem 0.1rem rgba($black, 0.1)!important;
+$progress-bar-color: $white!important;
+$progress-bar-bg: theme-color('primary')!important;
+$progress-bar-animation-timing: 1s linear infinite!important;
+$progress-bar-transition: width 0.6s ease!important;
+
+
+// List group
+$list-group-bg: $white!important;
+$list-group-border-color: rgba($black, 0.125)!important;
+$list-group-border-width: $border-width!important;
+$list-group-border-radius: $border-radius!important;
+$list-group-item-padding-y: 0.75rem!important;
+$list-group-item-padding-x: 1.25rem!important;
+$list-group-hover-bg: $gray-100!important;
+$list-group-active-color: $component-active-color!important;
+$list-group-active-bg: $component-active-bg!important;
+$list-group-active-border-color: $list-group-active-bg!important;
+$list-group-disabled-color: $gray-600!important;
+$list-group-disabled-bg: $list-group-bg!important;
+$list-group-action-color: $gray-700!important;
+$list-group-action-hover-color: $list-group-action-color!important;
+$list-group-action-active-color: $body-color!important;
+$list-group-action-active-bg: $gray-200!important;
+
+
+// Image thumbnails
+$thumbnail-padding: 0.25rem!important;
+$thumbnail-bg: $body-bg!important;
+$thumbnail-border-width: $border-width!important;
+$thumbnail-border-color: #ddd!important;
+$thumbnail-border-radius: $border-radius!important;
+$thumbnail-box-shadow: 0 1px 2px rgba($black, 0.075)!important;
+$thumbnail-transition: all 0.2s ease-in-out!important;
+
+
+// Figures
+$figure-caption-font-size: 90%!important;
+$figure-caption-color: $gray-600!important;
+
+
+// Breadcrumbs
+$breadcrumb-padding-y: 0.75rem!important;
+$breadcrumb-padding-x: 1rem!important;
+$breadcrumb-item-padding: 0.5rem!important;
+$breadcrumb-bg: $gray-200!important;
+$breadcrumb-divider-color: $gray-600!important;
+$breadcrumb-active-color: $gray-600!important;
+$breadcrumb-divider: '/'!important;
+
+
+// Carousel
+$carousel-control-color: $white!important;
+$carousel-control-width: 15%!important;
+$carousel-control-opacity: 0.5!important;
+$carousel-indicator-width: 30px!important;
+$carousel-indicator-height: 3px!important;
+$carousel-indicator-spacer: 3px!important;
+$carousel-indicator-active-bg: $white!important;
+$carousel-caption-width: 70%!important;
+$carousel-caption-color: $white!important;
+$carousel-control-icon-width: 20px!important;
+$carousel-transition: transform 0.6s ease!important;
+
+
+// Close
+$close-font-size: $font-size-base * 1.5!important;
+$close-font-weight: $font-weight-bold!important;
+$close-color: $black!important;
+$close-text-shadow: 0 1px 0 $white!important;
+
+
+// Code
+$code-font-size: 90%!important;
+$code-padding-y: 0.2rem!important;
+$code-padding-x: 0.4rem!important;
+$code-color: #bd4147!important;
+$code-bg: $gray-100!important;
+$kbd-color: $white!important;
+$kbd-bg: $gray-900!important;
+$pre-color: $gray-900!important;
+$pre-scrollable-max-height: 340px!important;
+
+
+// Options
+$enable-rounded: true!important;
+$enable-shadows: false!important;
+$enable-gradients: false!important;
+$enable-transitions: true!important;
+$enable-hover-media-query: false!important;
+$enable-grid-classes: true!important;
+$enable-print-styles: true!important;
